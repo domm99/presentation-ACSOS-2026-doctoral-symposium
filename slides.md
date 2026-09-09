@@ -196,7 +196,7 @@ class: stage-slide
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 0.7rem;">
   <div style="border-top: 2px solid var(--deck-teal); padding-top: 0.45rem;">
     <div style="font-weight: 700; color: var(--deck-teal);">Accuracy</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Proximity-aware federations match centralized FL under IID; outperform FedAvg, FedProx, Scaffold, and clustered baselines under spatial non-IID (MNIST, CIFAR-100, UTKFace).</div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Self-organizing federations match centralized FL under IID; outperform FedAvg, FedProx, Scaffold, and clustered baselines under spatial non-IID (MNIST, CIFAR-100, UTKFace).</div>
   </div>
   <div style="border-top: 2px solid var(--deck-green); padding-top: 0.45rem;">
     <div style="font-weight: 700; color: var(--deck-green);">Robustness</div>
