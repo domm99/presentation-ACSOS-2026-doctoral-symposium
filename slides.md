@@ -1,6 +1,6 @@
 ---
 theme: default
-title: Your Talk Title
+title: Self-Organizing Federated Learning in Collective Adaptive Systems
 titleTemplate: '%s'
 colorSchema: light
 routerMode: hash
@@ -8,116 +8,23 @@ mdc: true
 selectable: true
 layout: default
 class: first-slide
-transition: slide-left
+transition: fade
 defaults:
   layout: default
   transition: slide-left
 ---
 
-<!--
-Cover slide.
-- Remove the .cover-badges block if you don't have artifact badges.
-- Swap <Logo /> for your own logo (see components/Logo.vue), or a
-  <BaseImg src="logo.png" /> pointing at a file in /public.
-- Both <QrCard> entries are optional; delete the row if you don't need them.
--->
-
-<div class="cover-badges">
-  <div class="cover-badge badge-available" role="img" aria-label="Artifacts Available"></div>
-  <div class="cover-badge badge-reusable" role="img" aria-label="Artifacts Evaluated — Reusable"></div>
-</div>
-
-<div class="cover-qr-row" style="position: absolute; top: 1.4rem; left: 1.6rem; display: flex; gap: 1rem; align-items: center; z-index: 10;">
-  <QrCard title="Repository" url="https://github.com/your-org/your-repo" short="github.com/.../your-repo" :size="6.5" />
-</div>
-
 <div class="cover-center-shell">
-  <div class="cover-logo-wrap">
-    <Logo text="Your Project" />
-  </div>
-
-  <h2 class="cover-subtitle">A one-line subtitle describing your talk</h2>
-
+  <p class="cover-kicker">ACSOS 2026 · Doctoral Symposium · Cesena</p>
+  <h1 class="cover-paper-title">Self-Organizing Federated Learning</h1>
+  <h2 class="cover-subtitle">in Collective Adaptive Systems</h2>
+  <div class="cover-rule" />
   <div class="cover-meta-row">
-    <div class="cover-mini-meta"><strong style="color: var(--deck-orange);">First Author</strong> · Second Author · Third Author</div>
-    <div class="cover-mini-meta">Your Institution</div>
+    <div class="cover-mini-meta"><strong style="color: var(--deck-orange);">Davide Domini</strong></div>
   </div>
-
-  <p class="cover-kicker">CONFERENCE 2026 · City · Day Month Year</p>
-</div>
-
----
-layout: default
-class: stage-slide
----
-
-<!--
-"stage-slide": a title + prose slide, vertically centered. Good default
-for narrative/argument slides. Use <v-clicks> to reveal bullets one by
-one, and the three-column "callout row" below for a quick visual break.
--->
-
-<div class="slide-shell">
-
-# The problem, stated plainly
-
-- First point framing the problem you're addressing, with <span class="mark-teal">key terms highlighted</span>.
-- Second point, building on the first — use <span class="u-solid-orange">underline emphasis</span> for a different accent.
-- Third point setting up why this matters.
-
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 0.7rem;">
-  <div v-click style="border-top: 2px solid var(--deck-teal); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-teal);">Where it matters</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Short supporting detail.</div>
+  <div class="cover-affiliations">
+    <BaseImg src="images/disi.svg" alt="Alma Mater Studiorum — Università di Bologna" class="affiliation-logo logo-unibo" />
   </div>
-  <div v-click style="border-top: 2px solid var(--deck-green); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-green);">The bottleneck</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Short supporting detail.</div>
-  </div>
-  <div v-click style="border-top: 2px solid var(--deck-orange); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-orange);">What's needed</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Short supporting detail.</div>
-  </div>
-</div>
-
-</div>
-
----
-layout: default
-class: stage-slide
----
-
-<!--
-Example using the reusable animated FlowDiagram component together with
-<v-clicks>: click through the bullets and the matching stage lights up.
--->
-
-<div class="slide-shell" style="gap: 0.6rem;">
-
-# Your Approach
-## A one-line description of the core idea
-
-<div class="visual-box visual-box-wide" style="margin: 0 auto 0.2rem;">
-  <FlowDiagram
-    :click="$clicks"
-    :stages="[
-      { label: 'Stage One', sub: 'short caption' },
-      { label: 'Stage Two', sub: 'short caption' },
-      { label: 'Stage Three', sub: 'short caption' },
-    ]"
-  />
-</div>
-
-<v-clicks>
-
-- Explain stage one and why it matters<sup class="cite">[1]</sup>.
-- Explain stage two, building on stage one.
-- Explain stage three, the payoff.
-
-</v-clicks>
-
-<Cites refs="1" />
-
 </div>
 
 ---
@@ -125,42 +32,37 @@ layout: default
 class: viz-slide
 ---
 
-<!--
-"viz-slide": split-grid layout (text left, visual right) for slides that
-pair an explanation with a diagram, image, or chart.
--->
-
 <div class="slide-shell">
 
-# A closer look
+# Collective Adaptive Systems
 
 <div class="split-grid">
 
 <div>
 
-<ul>
-  <li><strong>Break the idea into steps:</strong>
-    <ul>
-      <li v-click="1"><strong style="color: var(--deck-orange);">1. First</strong> — description of the first step.</li>
-      <li v-click="2"><strong style="color: var(--deck-teal);">2. Second</strong> — description of the second step.</li>
-      <li v-click="3"><strong style="color: var(--deck-green);">3. Third</strong> — description of the third step.</li>
-    </ul>
-  </li>
-</ul>
+- **Large-scale ensembles** of situated, heterogeneous devices that interact *locally* and adapt over time.
+- No global coordinator — system-level behavior **emerges** from peer-to-peer interactions.
+- Examples: smart cities, IoT fleets, swarms of autonomous robots.
+
+<div style="display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-top: 0.6rem;">
+  <div v-click style="border-top: 2px solid var(--deck-teal); padding-top: 0.4rem;">
+    <div style="font-weight: 700; color: var(--deck-teal); font-size: 0.88rem;">Decentralized</div>
+    <div style="font-size: 0.78rem; color: var(--deck-muted); line-height: 1.3;">Each device observes only a partial, local view of the environment.</div>
+  </div>
+  <div v-click style="border-top: 2px solid var(--deck-green); padding-top: 0.4rem;">
+    <div style="font-weight: 700; color: var(--deck-green); font-size: 0.88rem;">Spatially non-IID</div>
+    <div style="font-size: 0.78rem; color: var(--deck-muted); line-height: 1.3;">Proximity makes nearby devices share similar — but globally heterogeneous — data.</div>
+  </div>
+  <div v-click style="border-top: 2px solid var(--deck-orange); padding-top: 0.4rem;">
+    <div style="font-weight: 700; color: var(--deck-orange); font-size: 0.88rem;">Dynamic & mobile</div>
+    <div style="font-size: 0.78rem; color: var(--deck-muted); line-height: 1.3;">Devices join, leave, and move — topology and distributions shift continuously.</div>
+  </div>
+</div>
 
 </div>
 
 <div class="visual-box">
-  <!-- Swap for a real image once you have one, e.g.: -->
-  <!-- <BaseImg src="your-diagram.png" alt="Diagram" /> -->
-  <FlowDiagram
-    :click="$clicks"
-    :stages="[
-      { label: 'Step 1' },
-      { label: 'Step 2' },
-      { label: 'Step 3' },
-    ]"
-  />
+  <CasDomain />
 </div>
 
 </div>
@@ -169,39 +71,20 @@ pair an explanation with a diagram, image, or chart.
 
 ---
 layout: default
-class: code-slide
+class: stage-slide top-slide
+clicks: 3
 ---
-
-<!--
-"code-slide": for a code sample plus a short breakdown. The {all|3-5|6}
-syntax after the language name step-highlights lines on each click.
--->
 
 <div class="slide-shell">
 
-# Core API
+# Federated learning — standard paradigm
 
-```python {all|1-2|3|4}
-def example(input):
-    step = transform(input)
-    result = process(step)
-    return result
-```
+> a distributed learning paradigm where devices train a shared model collaboratively without sharing their raw data. <Cite n="1" />
 
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 0.7rem;">
-  <div v-click="1" style="border-top: 2px solid var(--deck-teal); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-teal);">Input</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">What comes in and why.</div>
-  </div>
-  <div v-click="2" style="border-top: 2px solid var(--deck-green); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-green);">Transform</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">What happens in between.</div>
-  </div>
-  <div v-click="3" style="border-top: 2px solid var(--deck-orange); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-orange);">Output</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">What comes out.</div>
-  </div>
-</div>
+<FederatedLearning :click="$clicks" />
+<div v-click="1" class="click-marker" /><div v-click="2" class="click-marker" /><div v-click="3" class="click-marker" />
+
+<Cites refs="1" />
 
 </div>
 
@@ -210,27 +93,118 @@ layout: default
 class: stage-slide
 ---
 
-<!--
-Example of the "comparison-card" / "module-card" utility classes from
-styles/index.css for a 3-up feature or comparison grid.
--->
-
 <div class="slide-shell">
 
-# Comparing options
+# Standard FL was not built for CAS
 
 <div class="comparison-grid">
   <div class="comparison-card">
-    <div class="card-title">Option A</div>
-    <div class="card-text">What it is and its main trade-off.</div>
-  </div>
-  <div class="comparison-card highlight">
-    <div class="card-title">Option B <span class="text-orange">(chosen)</span></div>
-    <div class="card-text">Why this is the pick.</div>
+    <div class="card-title">Central aggregator</div>
+    <div class="card-text">A fixed coordinator is a single point of failure — incompatible with a fully decentralized CAS.</div>
   </div>
   <div class="comparison-card">
-    <div class="card-title">Option C</div>
-    <div class="card-text">What it is and its main trade-off.</div>
+    <div class="card-title">IID assumption</div>
+    <div class="card-text">Spatial locality creates strong non-IID distributions — FedAvg accuracy degrades significantly.</div>
+  </div>
+  <div class="comparison-card">
+    <div class="card-title">Dynamic participation</div>
+    <div class="card-text">Mobility and churn break fixed federation structures — federations must reorganize over time.</div>
+  </div>
+</div>
+
+<p v-click style="margin-top: 1rem; text-align: center; font-size: 0.95rem; color: var(--deck-muted);">
+  <span class="mark-teal">Heterogeneity</span>, <span class="mark-orange">mobility</span>, and <span class="mark-green">dynamic participation</span> are not edge cases in CAS — they define it.
+</p>
+
+</div>
+
+---
+layout: default
+class: stage-slide
+---
+
+<div class="slide-shell">
+
+# Research objective
+
+<div style="text-align: center; font-size: 1.1rem; font-weight: 600; color: var(--deck-teal); margin: 1.1rem 0 1.3rem; line-height: 1.55; border-left: 3px solid var(--deck-teal); padding-left: 1rem; text-align: left;">
+  How can learning <em>emerge</em> in a CAS from local device interactions,<br>
+  adapting to non-IID data, mobility, and resource constraints — without a central coordinator?
+</div>
+
+- Combine <span class="mark-teal">decentralized FL</span> with <span class="mark-orange">self-organizing coordination</span> via **Aggregate Computing (AC)**.
+- Federation structure is **not fixed a priori** — it emerges from spatial proximity and model similarity.
+- AC expresses FL processes as <span class="mark-green">collective behaviors</span>: leader election, neighborhood formation, aggregation.
+
+</div>
+
+---
+layout: default
+class: viz-slide
+clicks: 4
+---
+
+<div class="slide-shell">
+
+# Self-organizing federations
+
+<FederationViz :click="$clicks" />
+
+</div>
+
+---
+layout: default
+class: stage-slide
+---
+
+<div class="slide-shell">
+
+# Contributions
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.0rem; margin-top: 0.1rem;">
+  <div v-click style="border-top: 2px solid var(--deck-teal); padding-top: 0.45rem;">
+    <div style="font-weight: 700; color: var(--deck-teal);">FBFL <Cite n="9,4" /></div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Field-Based Federated Learning — federation structure emerges from AC field computations, handling spatial non-IID data.</div>
+  </div>
+  <div v-click style="border-top: 2px solid var(--deck-green); padding-top: 0.45rem;">
+    <div style="font-weight: 700; color: var(--deck-green);">RND clustering <Cite n="10" /></div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Random Network Distillation as a cheap novelty signal to discover which devices share a similar data distribution.</div>
+  </div>
+  <div v-click style="border-top: 2px solid #1e3a5f; padding-top: 0.45rem;">
+    <div style="font-weight: 700; color: #1e3a5f;">C²FL <Cite n="11" /></div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Clustered Continual FL — preserves accuracy under spatial and temporal data drift caused by device mobility.</div>
+  </div>
+  <div v-click style="border-top: 2px solid var(--deck-teal); padding-top: 0.45rem;">
+    <div style="font-weight: 700; color: var(--deck-teal);">Tools & benchmarks <Cite n="12,7" /></div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;"><strong>ProFed</strong> — proximity-based non-IID benchmark &nbsp;·&nbsp; <strong>Phyelds</strong> — Python AC framework.</div>
+  </div>
+</div>
+
+<Cites refs="4,7,9,10,11,12" />
+
+</div>
+
+---
+layout: default
+class: stage-slide
+---
+
+<div class="slide-shell">
+
+# Results
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 0.7rem;">
+  <div style="border-top: 2px solid var(--deck-teal); padding-top: 0.45rem;">
+    <div style="font-weight: 700; color: var(--deck-teal);">Accuracy</div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Proximity-aware federations match centralized FL under IID; outperform FedAvg, FedProx, Scaffold, and clustered baselines under spatial non-IID (MNIST, CIFAR-100, UTKFace).</div>
+  </div>
+  <div style="border-top: 2px solid var(--deck-green); padding-top: 0.45rem;">
+    <div style="font-weight: 700; color: var(--deck-green);">Robustness</div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Self-organizing structure survives aggregator failures and maintains stable federations under device mobility.</div>
+  </div>
+  <div style="border-top: 2px solid var(--deck-orange); padding-top: 0.45rem;">
+    <div style="font-weight: 700; color: var(--deck-orange);">Efficiency</div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">RND similarity signals reduce communication and compute costs while preserving competitive accuracy.</div>
   </div>
 </div>
 
@@ -242,69 +216,31 @@ class: end-slide
 transition: fade
 ---
 
-<!--
-"end-slide": for takeaways / summary slides, vertically centered like
-stage-slide but without top padding.
--->
-
 <div class="slide-shell">
 
-# Key takeaways
+# Takeaways & next steps
 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 0.7rem;">
   <div style="border-top: 2px solid var(--deck-teal); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-teal);">Takeaway one</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Short supporting line.</div>
+    <div style="font-weight: 700; color: var(--deck-teal);">CAS need a new FL</div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Self-organizing, decentralized — not just a distributed version of standard FL.</div>
   </div>
   <div style="border-top: 2px solid var(--deck-green); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-green);">Takeaway two</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Short supporting line.</div>
+    <div style="font-weight: 700; color: var(--deck-green);">AC is the bridge</div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Aggregate Computing lets federation structure emerge from local device interactions.</div>
   </div>
   <div style="border-top: 2px solid var(--deck-orange); padding-top: 0.45rem;">
-    <div style="font-weight: 700; color: var(--deck-orange);">Takeaway three</div>
-    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Short supporting line.</div>
+    <div style="font-weight: 700; color: var(--deck-orange);">Results are promising</div>
+    <div style="font-size: 0.82rem; color: var(--deck-muted); line-height: 1.35;">Better accuracy + robustness under non-IID data, mobility, and resource constraints.</div>
   </div>
 </div>
 
 <p class="closing-line">
-  Next: <span class="mark-teal">future direction one</span> · <span class="mark-orange">future direction two</span> · <span class="mark-green">future direction three</span>
+  Next: <span class="mark-teal">real-world spatial benchmarks</span> · <span class="mark-orange">FL as fully self-adaptive architecture</span> · <span class="mark-green">cheaper similarity proxies</span>
 </p>
 
 </div>
 
----
-layout: default
-class: end-slide
----
-
-<!--
-Thank-you / contact slide with QR codes. Delete the collage on the right
-if you don't have supporting images/animated components to show off, or
-replace it with a single centered <BaseImg>.
--->
-
-<div class="slide-shell">
-
-<div class="thanks-grid" style="grid-template-columns: 1fr;">
-
-<div class="thanks-left">
-  <div class="thanks-title">Thank You!</div>
-  <Logo text="Your Project" style="margin-bottom: 0.2rem;" />
-
-  <div class="thanks-subtitle">
-    A one-line description of your talk
-  </div>
-  <div class="thanks-qr-row">
-    <QrCard title="Repository" url="https://github.com/your-org/your-repo" :size="5.8" />
-  </div>
-  <div class="thanks-details">
-    <strong>Contact:</strong> you@example.com
-  </div>
-</div>
-
-</div>
-
-</div>
 
 ---
 layout: default

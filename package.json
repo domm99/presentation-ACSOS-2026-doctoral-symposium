@@ -10,6 +10,7 @@
   "devDependencies": {
     "@fontsource/ibm-plex-mono": "latest",
     "@fontsource/ibm-plex-sans": "latest",
+    "@iconify-json/ci": "^1.2.2",
     "@slidev/cli": "latest",
     "playwright-chromium": "^1.60.0",
     "qrcode": "latest"
