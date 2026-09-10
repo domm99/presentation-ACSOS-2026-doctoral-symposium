@@ -50,11 +50,11 @@ export const REFERENCES: Record<number, Reference> = {
     full: 'D. Domini et al. <em>FBFL: A Field-Based Coordination Approach for Data Heterogeneity in Federated Learning</em>. Logical Methods in Computer Science, Vol. 22(1), 2026.',
   },
   10: {
-    short: 'Domini et al. — Discovering Collaboration from Novelty: RND for Clustered FL. arXiv, 2026',
+    short: 'Domini et al. — Discovering Collaboration from Novelty: RND for Clustered FL. AI4AS, 2026',
     full: 'D. Domini et al. <em>Discovering Collaboration from Novelty: Random Network Distillation for Clustered Federated Learning</em>. arXiv:2606.30499, 2026.',
   },
   11: {
-    short: 'Domini et al. — C²FL: Clustered Continual FL under Spatial and Temporal Drift. arXiv, 2026',
+    short: 'Domini et al. — C²FL: Clustered Continual FL under Spatial and Temporal Drift. ACSOS, 2026',
     full: 'D. Domini et al. <em>C²FL: Clustered Continual Federated Learning under Spatial and Temporal Drift</em>. arXiv:2606.18003, 2026.',
   },
   12: {
